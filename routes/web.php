@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    $zoka = 'Zrc';
-    $age = 25;
-    return view('welcome', compact('zoka', 'age'));
-});
+// Route::get('cars', function () {
+//     $zoka = 'Zrc';
+//     $age = 25;
+//     return view('cars.cars', compact('zoka', 'age'));
+// });
 
 // Route::get('/', function () {
 //     $age = 25;
@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 
 Route::get('about', function () {
-    return view('about');
+    return view('cars.about');
 });
 
+
+Route::resource('cars', 'CarsController');
