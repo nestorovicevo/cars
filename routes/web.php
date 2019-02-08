@@ -12,8 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $zoka = 'Zrc';
+    $age = 25;
+    return view('welcome', compact('zoka', 'age'));
 });
+
+// Route::get('/', function () {
+//     $age = 25;
+//     return view('welcome', compact('age'));
+// });
+
 
 
 Route::get('about', function () {
